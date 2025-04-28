@@ -58,3 +58,6 @@ export async function tambahtugas(tugas, status, prioritas, tanggal) {
     console.log('gagal menambah tugas ' + e);
   }
 }
+export async function hapustugas(docId) {
+  await deleteDoc(doc(db, "senin", docId));
+}
